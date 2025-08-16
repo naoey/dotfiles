@@ -1,0 +1,48 @@
+# the scripting-addition must be loaded manually if
+# you are running yabai on macOS Big Sur. Uncomment
+# the following line to have the injection performed
+# when the config is executed during startup.
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# general space config
+
+yabai -m config layout float
+yabai -m config --space 2 layout bsp
+yabai -m config --space 3 layout bsp
+yabai -m config --space 4 layout bsp
+
+yabai -m config  window_gap 5
+yabai -m config left_padding 10
+yabai -m config top_padding 10
+yabai -m config right_padding 10
+yabai -m config bottom_padding 10
+
+# space 3
+yabai -m rule --add app="iTerm2" space=^3
+
+# space 4
+yabai -m rule --add app="Code" space=^4
+yabai -m rule --add app="JetBrains Rider.*" space=^4
+yabai -m rule --add app="RubyMine.*" space=^4
+yabai -m rule --add app="Zoom" space=^1
+
+# non-floating stuff
+yabai -m rule --add app='^Reflector 4$' manage=on
+
+# floating stuff
+yabai -m rule --add app='^Simulator$' manage=off
+yabai -m rule --add title="JetBrains Toolbox" manage=off mouse_follows_focus=off
+yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="Stats" manage=off
+yabai -m rule --add app="choose" manage=off mouse_follows_focus=off
+yabai -m rule --add app="CleanShot X" manage=off mouse_follows_focus=off
+yabai -m rule --add app="BunnyHUD" manage=off mouse_follows_focus=off
+yabai -m rule --add title="Bunny HUD" manage=off mouse_follows_focus=off
+
+# stupid apps
+yabai -m rule --add label=ignoreTeamsNotification app="Microsoft Teams" title="Microsoft Teams" manage=off
