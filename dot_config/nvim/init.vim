@@ -1,6 +1,6 @@
 lua require('boot')
 
-language en_GB
+language en_IN
 
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! noautocmd w

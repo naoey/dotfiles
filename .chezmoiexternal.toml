@@ -1,4 +1,4 @@
 [".config/kitty/kitty_search"]
     type = "git-repo"
-    url = "git submodule add http://github.com:trygveaa/kitty-kitten-search"
+    url = "git@github.com:trygveaa/kitty-kitten-search.git"
     refreshPeriod = "168h"

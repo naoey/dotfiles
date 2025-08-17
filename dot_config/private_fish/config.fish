@@ -88,7 +88,7 @@ end
 
 # Environment variable setup
 
-set --global --export LANG en_GB.UTF-8
+set --global --export LANG en_IN.UTF-8
 
 set -xg EDITOR nvim
 set -xg XDG_CONFIG_HOME "$HOME/.config"
