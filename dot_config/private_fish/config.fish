@@ -90,6 +90,7 @@ end
 
 set --global --export LANG en_GB.UTF-8
 
+set -xg EDITOR nvim
 set -xg XDG_CONFIG_HOME "$HOME/.config"
 set -xg HOST_IP (get_host_ip)
 set -xg GPG_TTY (tty)
