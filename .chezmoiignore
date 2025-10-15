@@ -3,3 +3,5 @@
 # Ignore per machine fish configs
 local.fish
 .chezmoi-private/
+
+dot_config/kitty/kitty_search
