@@ -3,5 +3,6 @@
 # Ignore per machine fish configs
 local.fish
 .chezmoi-private/
+.DS_Store
 
 dot_config/kitty/kitty_search

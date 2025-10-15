@@ -108,7 +108,8 @@ alias poi yarn
 alias lg lazygit
 alias ld lazydocker
 
-alias ll "ls -la"
+alias ls eza
+alias ll "eza -lah --total-size"
 alias azr "az repos"
 
 alias ggg "git bisect good"
