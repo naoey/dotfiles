@@ -32,7 +32,7 @@ function get_host_ip
 end
 
 function ghpr
-    gh pr checkout (pbpaste)
+    gh pr checkout $argv (pbpaste)
 end
 
 function fish_greeting
