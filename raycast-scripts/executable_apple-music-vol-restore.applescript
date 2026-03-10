@@ -1,11 +1,11 @@
 #!/usr/bin/osascript
 
 # @raycast.schemaVersion 1
-# @raycast.title Fade Music to 50%
+# @raycast.title Fade Music to 40%
 # @raycast.mode silent
 
 tell application "Music"
-    set targetVolume to 50
+    set targetVolume to 40
     set currentVolume to sound volume
 
     if currentVolume < targetVolume then
