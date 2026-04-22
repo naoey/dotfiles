@@ -1,0 +1,49 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "prettier": {
+    "parser": "",
+    "allowed": true,
+  },
+  "base_keymap": "JetBrains",
+  "terminal": {
+    "font_size": 14.0,
+    "line_height": {
+      "custom": 1.3,
+    },
+    "cursor_shape": "block",
+    "blinking": "on",
+  },
+  "preview_tabs": {
+    "enabled": false,
+    "enable_preview_from_file_finder": false,
+  },
+  "minimap": {
+    "show": "always",
+    "max_width_columns": 135,
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "buffer_font_family": "JetBrains Mono NL",
+  "auto_indent_on_paste": true,
+  "ensure_final_newline_on_save": true,
+  "wrap_guides": [135],
+  "preferred_line_length": 135,
+  "soft_wrap": "bounded",
+  "hard_tabs": false,
+  "icon_theme": "Catppuccin Frappé",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark",
+  },
+  "formatter": "prettier",
+}
