@@ -1,3 +1,6 @@
+# chezmoi:template:left-delimiter=[[
+# chezmoi:template:right-delimiter=]]
+
 # vim:fileencoding=utf-8:foldmethod=marker
 
 #: Fonts {{{
@@ -19,7 +22,11 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
+[[ if eq .chezmoi.os "darwin" -]]
 font_size 14.0
+[[ else -]]
+font_size 11.0
+[[ end -]]
 
 #: Font size (in pts).
 
