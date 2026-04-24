@@ -71,19 +71,39 @@ function git_apply
 end
 
 function git_copy
+    # Check if we are in a git repository
+    if not git rev-parse --is-inside-work-tree >/dev/null 2>&1
+        echo "Error: Not a git repository" >&2
+        return 1
+    end
+
+    # Detect clipboard tool once
+    set -l copy_tool
     if type -q pbcopy
-        git diff | pbcopy
-        echo "Copied git diff to clipboard using pbcopy"
+        set copy_tool "pbcopy"
     else if type -q xclip
-        git diff | xclip -selection clipboard
-        echo "Copied git diff to clipboard using xclip"
+        set copy_tool "xclip -selection clipboard"
     else if type -q wl-copy
-        git diff | wl-copy
-        echo "Copied git diff to clipboard using wl-copy"
+        set copy_tool "wl-copy"
     else
         echo "No compatible clipboard tool found (pbcopy, xclip, wl-copy)." >&2
         return 1
     end
+
+    # Generate the diff and pipe it directly to the tool
+    # git add -N ensures untracked files are included in the diff
+    git add -N .
+    set -l diff_exists (git diff HEAD)
+
+    if test -n "$diff_exists"
+        git diff HEAD | eval $copy_tool
+        echo "Copied all changes (including untracked) to clipboard via "(echo $copy_tool | awk '{print $1}')
+    else
+        echo "No changes to copy."
+    end
+
+    # Cleanup the "intent-to-add"
+    git reset . >/dev/null 2>&1
 end
 
 # Environment variable setup
