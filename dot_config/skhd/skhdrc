@@ -163,3 +163,4 @@ alt - e : yabai -m window --toggle split
 
 ## Global hotkeys
 ctrl + cmd - n : open ~
+ctrl + cmd - t : open /Applications/kitty.app
