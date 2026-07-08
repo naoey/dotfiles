@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "text_rendering_mode": "subpixel",
+  "cli_default_open_behavior": "existing_window",
   "completions": {
     "lsp": true
   },
@@ -59,11 +61,11 @@
   "hard_tabs": false,
   "icon_theme": "Catppuccin Frappé",
   "ui_font_size": 16,
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Ayu Dark",
+    "light": "Ayu Light",
+    "dark": "Dark Purple",
   },
   "formatter": "prettier",
 }

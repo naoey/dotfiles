@@ -135,6 +135,7 @@ alias azr "az repos"
 alias ggg "git bisect good"
 alias gbg "git bisect bad"
 
+alias md "glow -p"
 
 # autocompletions
 
