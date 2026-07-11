@@ -22,6 +22,19 @@ git:
     refreshInterval: 5 # file/submodule refresh interval in seconds
     fetchInterval: 1800 # re-fetch interval in seconds
 
+customCommands:
+  - key: X
+    description: "Commits clipboard"
+    commandMenu:
+      - key: c
+        command: 'git format-patch --stdout {{ "{{.SelectedCommitRange.From}}^..{{.SelectedCommitRange.To}}" }} | pbcopy'
+        context: commits, subCommits
+        description: "Copy selected commits to clipboard"
+      - key: v
+        command: 'pbpaste | git am'
+        context: "commits"
+        description: "Paste selected commits from clipboard"
+
 notARepository: skip
 
 # Private services from a local file (not in Git)
