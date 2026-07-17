@@ -64,7 +64,7 @@
   "buffer_font_size": 16.0,
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
+    "light": "Quiet Light",
     "dark": "Dark Purple",
   },
   "formatter": "prettier",
