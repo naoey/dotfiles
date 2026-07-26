@@ -25,6 +25,7 @@ git:
 customCommands:
   - key: X
     description: "Commits clipboard"
+    context: 'global'
     commandMenu:
       - key: c
         command: 'git format-patch --stdout {{ "{{.SelectedCommitRange.From}}^..{{.SelectedCommitRange.To}}" }} | pbcopy'
