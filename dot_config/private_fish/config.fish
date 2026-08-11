@@ -137,6 +137,9 @@ alias gbg "git bisect bad"
 
 alias md "glow -p"
 
+# use ssh kitten to avoid annoying ssh from kitty
+alias ssh="kitty +kitten ssh"
+
 # autocompletions
 
 kubectl completion fish | source
