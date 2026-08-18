@@ -18,11 +18,17 @@ gui:
     language: en
 
 git:
-  refresher:
-    refreshInterval: 5 # file/submodule refresh interval in seconds
-    fetchInterval: 1800 # re-fetch interval in seconds
+  localBranchSortOrder: rececncy  
+
+refresher:
+  refreshInterval: 5 # file/submodule refresh interval in seconds
+  fetchInterval: 1800 # re-fetch interval in seconds
 
 customCommands:
+  - key: E
+    description: 'Create empty commit'
+    context: 'commits'
+    command: 'git commit --allow-empty -m "{{ "{{index .PromptResponses 0}}" }}"'
   - key: X
     description: "Commits clipboard"
     commandMenu:

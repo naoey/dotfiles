@@ -35,7 +35,7 @@
   },
   "base_keymap": "JetBrains",
   "terminal": {
-    "font_size": 14.0,
+    "font_size": 16.0,
     "line_height": {
       "custom": 1.3,
     },
