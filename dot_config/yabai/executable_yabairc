@@ -22,6 +22,9 @@ yabai -m config top_padding 10
 yabai -m config right_padding 10
 yabai -m config bottom_padding 10
 
+# space 2
+yabai -m rule --add app="^Safari$" space=^2
+
 # space 3
 yabai -m rule --add app="iTerm2" space=^3
 
