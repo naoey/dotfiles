@@ -108,7 +108,8 @@ end
 
 # Environment variable setup
 
-set --global --export LANG en_IN.UTF-8
+set -xg LANG en_IN.UTF-8
+set -xg LC_ALL en_IN.UTF-8
 
 set -xg EDITOR nvim
 set -xg XDG_CONFIG_HOME "$HOME/.config"
@@ -137,8 +138,10 @@ alias gbg "git bisect bad"
 
 alias md "glow -p"
 
-# use ssh kitten to avoid annoying ssh from kitty
-alias ssh="kitty +kitten ssh"
+if test (uname) = "Darwin"
+    # use ssh kitten to avoid annoying ssh from kitty
+    alias ssh="kitty +kitten ssh"
+end
 
 # autocompletions
 
